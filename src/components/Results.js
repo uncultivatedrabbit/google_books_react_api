@@ -10,8 +10,9 @@ export default class Results extends Component {
         </div>
         <div className="book-content-container">
           {book.title}<br/>
-          Author: {book.author[0]}<br/>
-          Price: {book.price}<br/>
+          Published Date: {book.publishedDate} <br/>
+          {book.author ? `Author: ${book.author[0]}` : "Author unavailable"}<br/>
+          {book.price ? `Price: ${book.price.amount}` : "Price unavailable"}<br/>
           {book.description}<br/>
         </div>
       </div>
